@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    width: 100%;
+    height: 70px;
+    background-color: #EC715F;
+  }
+
+  .drawer{
+    width: 100%;
+    height: 70px;
+  }
+
+  /*ハンバーガーアイコン*/
+.btn-burger {
+    cursor: pointer;
+    display: block;
+    width: 56px;
+    height: 60px;
+    position: absolute;
+    top: 1px;
+    right: 50px;
+}
+/*ハンバーガーアイコンを作る三本線*/
+.icon, .icon:before, .icon:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 2px; /*線の太さ*/
+    width: 35px; /*線の長さ*/
+    background-color: #444;
+    border-radius: 2px;
+    display: block;
+    content: '';
+    cursor: pointer;
+    margin: auto;
+}
+/*三本線の間隔*/
+.icon:before {
+  top: 20px;
+}
+.icon:after {
+  top: -20px;
+}
+/*チェックボックス非表示*/
+.nav-toggle {
+  display: none;
+}
+/*アイコンをクリックしたら*/
+.nav-toggle:checked ~ .btn-burger .icon {
+  background: transparent;
+}
+.nav-toggle:checked ~ .btn-burger .icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.nav-toggle:checked ~ .btn-burger .icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+.icon,
+.icon:before,
+.icon:after {
+  transition: all .8s;
+}
+
+  nav{
+    width: 1024px;
+    height: 70px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  .nav-list>li{
+    list-style: none;
+    display: inline-block;
+    line-height:70px;
+    margin: 0 30px;
+  }
+
+  .nav-list-item{
+    font-size: 16px;
+    color: #FAFAFA;
+  }
+
+  .nav-image{
+    width: 180px;
+    height: 70px;
+    padding:0 auto;
+  }
+
+  .mv{
+    background-image: url(img/mv.png);
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+  }
+
+  .main-text{
+    padding-top: 200px;
+    text-align: center;
+  }
+
+  .heading{
+    font-size: 64px;
+    color: #FAFAFA;
+  }
+
+  .character{
+    font-size: 20px;
+    color: #FAFAFA;
+    margin-top: 10px;
+  }
+
+  .center{
+    text-align: center;
+  }
+
+  .portfolio{
+    text-align: center;
+    background-color: #ECEFF1;
+  }
+
+  .text-title{
+    font-size: 32px;
+    color: #000000;
+    padding-top: 90px;
+  }
+
+  .stick{
+    height: 3px;
+    width: 70px;
+    background-color: #ec715f;
+    margin: 8px auto 30px;
+  }
+
+  .text{
+    font-size: 16px;
+    color: #000000;
+  }
+
+  .feature{
+    text-align: center;
+    width: 980px;
+    margin: 0 auto;
+  }
+
+  .feature-sub{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px auto 0;
+    justify-content: center;
+    padding-bottom: 90px;
+  }
+
+  .feature-sub>div{
+    width: 320px;
+    height: auto;
+  }
+
+  .strength:nth-child(1){
+    margin: 0 5px 0 0;
+  }
+
+  .strength:nth-child(2){
+    margin: 0 5px;
+  }
+
+  .strength:nth-child(3){
+    margin: 0 0 0 5px;
+  }
+  .sub-title{
+    margin: 10px 0;
+    font-size: 20px;
+    color: #000000;
+  }
+
+  .icon-1{
+    font-size: 60px;
+  }
+
+  .icon-2{
+    font-size: 60px;
+    color: #6495ED;
+  }
+
+  .icon-3{
+    font-size: 60px;
+    color: #FF0000;
+  }
+
+  .sub-text{
+    text-align: start;
+  }
+
+  .profile{
+    text-align: center;
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  .profile-content{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px auto 0;
+    justify-content: center;
+    padding-bottom: 90px;
+  }
+
+  .my-img{
+    width: 512px;
+    text-align: center;
+  }
+
+  .profile-img{
+    background-image: url(img/my-icon.jpg);
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-position: center;
+    margin: 0 auto;
+  }
+
+  .introduction{
+    width: 512px;
+  }
+
+  .introduction>section{
+    text-align: start;
+  }
+
+  .name{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .skill{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .contact{
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-content{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px auto 0;
+    justify-content: center;
+    padding-bottom: 90px;
+  }
+
+  .contact-address{
+    width: 400px;
+  }
+
+  .sns{
+    width: 400px;
+  }
+
+  .icon-facebook{
+    font-size: 50px;
+    margin-right: 10px;
+  }
+
+  .icon-twitter{
+    font-size: 50px;
+    margin: 0 10px;
+  }
+
+  .icon-instagram{
+    font-size: 50px;
+    margin-left: 10px;
+  }
+
+  .indent{
+    text-indent: -5em;
+  }
+
+  .indent-2{
+    text-indent: -5.5em;
+  }
+
+  .indent-3{
+    margin-left: -2em
+  }
+
+  .indent-4{
+    margin-left: -1em
+  }
+
+  .indent-5{
+    text-indent: -7em;
+  }
+
+  footer{
+    width: 100%;
+    height: 60px;
+    background-color: #EC715F;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .footer-text{
+    font-size: 16px;
+    color: #FAFAFA;
+    line-height:60px;
+  }
+
+  @media screen and (min-width:768px) {
+
+    .btn-burger {
+        display: none;  /*768px以上では使用しない */
+    }
+
+    nav-toggle:checked ~ .nav .nav-list {
+        display: none;
+    }
+
+    .ps-br{
+      display: block; /* PCを改行して */
+    }
+
+    .sp-br{
+      display: none; /* SPの改行を隠す */
+    }
+
+    .portfolio-img{
+      width: 920px;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 30px auto 0;
+      justify-content: center;
+      padding-bottom: 90px;
+    }
+
+    .portfolio-img>p{
+      width: 300px;
+      height: 250px;
+      background-size: cover;
+      background-position: top center;
+    }
+
+    .portfolio-img>p:nth-child(1){
+      background-image: url(img/sketch.jpg);
+      margin: 0 5px 5px 0;
+    }
+
+    .portfolio-img>p:nth-child(2){
+      background-image: url(img/websuku.png);
+      margin: 0 5px 5px 5px;
+    }
+
+    .portfolio-img>p:nth-child(3){
+      background-image: url(img/write.jpg);
+      margin: 0 0 5px 5px;
+    }
+
+    .portfolio-img>p:nth-child(4){
+      background-image: url(img/webcamp.png);
+      margin: 5px 5px 0 0;
+    }
+
+    .portfolio-img>p:nth-child(5){
+      background-image: url(img/talk.jpg);
+      margin: 5px 5px 0 5px;
+    }
+
+    .portfolio-img>p:nth-child(6){
+      background-image: url(img/webcamp-mother.png);
+      margin: 5px 0 0 5px;
+    }
+  }
+
+
+  @media screen and (max-width:767.98px) {
+
+    .ps-br{
+      display: none;
+    }
+
+    .sp-br{
+      display: block;
+    }
+
+    header {
+      width: 90%;
+      height: 50px;
+      margin: 0 auto;
+    }
+
+    .drawer{
+      width: 90%;
+      height: 50px;
+      margin: 0 auto;
+    }
+
+    nav{
+        width: 90%;
+        height: 50px;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .nav-list>li{
+      display: none;
+    }
+
+    .nav-image{
+      width: 100%;
+      height: 50px;
+    }
+
+    main{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    footer{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .portfolio-img{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .mv{
+      background-image: url(img/code.png);
+      background-position: top center;
+    }
+
+    .main-text{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .heading{
+      font-size:40px;
+    }
+
+    .character{
+      font-size:18px;
+    }
+
+    .portfolio-img{
+      width: 90%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 30px auto 0;
+      padding-bottom: 90px;
+    }
+
+    .portfolio-img>p{
+      width: 300px;
+      height: 250px;
+      background-size: cover;
+      background-position: top center;
+    }
+
+    .portfolio-img>p:nth-child(1){
+      background-image: url(img/websuku.png);
+      margin: 0 auto 5px;
+    }
+
+    .portfolio-img>p:nth-child(2){
+      background-image: url(img/webcamp.png);
+      margin: 5px auto;
+    }
+
+    .portfolio-img>p:nth-child(3){
+      background-image: url(img/webcamp-mother.png);
+      margin: 5px auto 0;
+    }
+
+    .portfolio-img>p:nth-child(4){
+      display: none;
+    }
+
+    .portfolio-img>p:nth-child(5){
+      display: none;
+    }
+
+    .portfolio-img>p:nth-child(6){
+      display: none;
+    }
+
+    .feature{
+      width: 90%;
+    }
+
+    .strength:nth-child(1){
+      margin: 30px auto;
+    }
+
+    .strength:nth-child(2){
+      margin: 30px auto;
+    }
+
+    .strength:nth-child(3){
+      margin: 30px auto;
+    }
+
+    .feature-sub{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      margin: 30px auto 0;
+    }
+
+    .feature-sub>div{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .sub-text{
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .profile{
+      width: 90%;
+      background-color: #ECEFF1;
+    }
+
+    .profile-content{
+      display: flex;
+      flex-direction: column;
+      margin: 30px auto 0;
+      padding-bottom: 90px;
+    }
+
+    .name{
+      margin-top: 20px;
+    }
+
+    .my-img{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .introduction{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .introduction>section{
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .contact{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .contact-content{
+      display: flex;
+      flex-direction: column;
+      margin: 30px auto 0;
+      padding-bottom: 90px;
+    }
+
+    .contact-address>section{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .contact-address{
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .indent{
+      text-indent: 0;
+    }
+
+    .indent-2{
+      text-indent: 0;
+    }
+
+    .indent-3{
+      margin-left: 0;
+    }
+
+    .indent-4{
+      margin-left: 0;
+    }
+
+    .indent-5{
+      text-indent: 0;
+    }
+
+    .sns{
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
